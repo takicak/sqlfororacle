@@ -1,0 +1,22 @@
+# Table of contents
+
+* [Temel SQL'e Giriş ve Kaynaklar](README.md)
+* [Oracle Platformu Kurulumu](kurulum.md)
+* [SQL DML Komutları](dml-operasyonlari/README.md)
+  * [Select](dml-operasyonlari/select.md)
+  * [Where](dml-operasyonlari/where.md)
+  * [Order By](dml-operasyonlari/order-by.md)
+  * [Group By](dml-operasyonlari/group-by.md)
+  * [Having](dml-operasyonlari/having.md)
+  * [Connect By Level](dml-operasyonlari/oernekler.md)
+  * [Union - Minus - Intersect](dml-operasyonlari/union-minus-intersect.md)
+  * [Join Yöntemleri](dml-operasyonlari/join-yoentemleri.md)
+  * [Insert](dml-operasyonlari/insert.md)
+  * [Update](dml-operasyonlari/update.md)
+  * [Delete](dml-operasyonlari/delete.md)
+  * [Merge](dml-operasyonlari/merge.md)
+* [SQL DDL Komutları](ddl-operasyonlari.md)
+* [SQL DCL Komutları](sql-dcl-komutlari.md)
+* [SQL TCL Komutları](sql-tcl-komutlari.md)
+* [Oracle PL/SQL Developer](oracle-pl-sql-developer.md)
+
