@@ -93,9 +93,21 @@ GROUPING SETS ( (D.DEPARTMENT_NAME, E.JOB_ID),
 
 #### ROLLUP - [https://www.oracletutorial.com/oracle-basics/oracle-rollup/](https://www.oracletutorial.com/oracle-basics/oracle-rollup/) 
 
+```sql
+--MS SQL ÖRNEK
+select case when GROUPING_ID(Color)=0 
+       then Color else 'Toplam' end,
+       sum(ListPrice),GROUPING_ID(Color)
+from Production.Product
+group by Color
+with rollup
+```
+
 #### PIVOT - [https://www.oracletutorial.com/oracle-basics/oracle-pivot/](https://www.oracletutorial.com/oracle-basics/oracle-pivot/) 
 
 #### UNPIVOT - [https://www.oracletutorial.com/oracle-basics/oracle-unpivot/](https://www.oracletutorial.com/oracle-basics/oracle-unpivot/) 
 
 #### CONNECT BY LEVEL
+
+
 
