@@ -243,13 +243,14 @@ WHERE E.DEPARTMENT_ID NOT IN (90, 60)
 Daha fazla bilgi için: [https://www.oracletutorial.com/oracle-basics/oracle-any/](https://www.oracletutorial.com/oracle-basics/oracle-any/) 
 
 ```sql
+-- ANY = İLE KULLANILDIĞINDA IN KULLANIMINDAN FARKI YOK
 SELECT * FROM EMPLOYEES E
 WHERE E.DEPARTMENT_ID = ANY (90, 60)
 ==
 SELECT * FROM EMPLOYEES E
 WHERE E.DEPARTMENT_ID = 90 OR E.DEPARTMENT_ID = 60
 
-
+-- ANY DE DİĞER OPERATÖRLER DE KULLANILABİLİYOR
 SELECT * FROM EMPLOYEES E
 WHERE E.DEPARTMENT_ID < ANY (90, 60)
 ==
