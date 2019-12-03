@@ -15,6 +15,7 @@
   * [Update](dml-operasyonlari/update.md)
   * [Delete](dml-operasyonlari/delete.md)
   * [Merge](dml-operasyonlari/merge.md)
+  * [Örnek Uygulamalar](dml-operasyonlari/oernek-uygulamalar.md)
 * [SQL DDL Komutları](ddl-operasyonlari.md)
 * [SQL DCL Komutları](sql-dcl-komutlari.md)
 * [SQL TCL Komutları](sql-tcl-komutlari.md)
