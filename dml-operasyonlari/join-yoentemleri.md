@@ -32,7 +32,7 @@ SELECT a.id id_a, a.color color_a,
        b.id id_b, b.color color_b
 FROM palette_a a
 LEFT JOIN palette_b b ON a.color = b.color;
---WHERE b.id IS NULL;  
+--WHERE b.id IS NULL; 
 ```
 
 ![](../.gitbook/assets/left-outer-only-nulls.JPG)
