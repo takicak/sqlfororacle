@@ -54,7 +54,18 @@ FROM EMPLOYEES E, DEPARTMENTS D
 WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID
 ```
 
+```sql
+SELECT department_id, MAX(salary)
+  FROM employees
+  GROUP BY department_id;
 
+--ENTERESAN BİR KULLANIM  
+SELECT AVG(MAX(salary))
+  FROM employees
+  GROUP BY department_id;
+```
+
+#### 
 
 #### GROUPING SETS
 
@@ -85,20 +96,69 @@ GROUPING SETS ( (D.DEPARTMENT_NAME, E.JOB_ID),
                 (NULL)
                )
 --ORDER BY GROUPING_ID(NULL)
+
+SELECT GROUPING(DEPARTMENT_NAME), GROUPING(JOB_ID), GROUPING(NULL), D.DEPARTMENT_NAME, E.JOB_ID, SUM(E.SALARY)
+FROM EMPLOYEES E, DEPARTMENTS D
+WHERE E.DEPARTMENT_ID = D.DEPARTMENT_ID
+GROUP BY
+GROUPING SETS ( (D.DEPARTMENT_NAME, E.JOB_ID),
+                (D.DEPARTMENT_NAME),
+                (E.JOB_ID),
+                (NULL)
+               )
+ORDER BY DEPARTMENT_NAME NULLS LAST, JOB_ID NULLS LAST;
+ORDER BY GROUPING(NULL);
+```
+
+### 
+
+### CUBE - [https://www.oracletutorial.com/oracle-basics/oracle-cube/](https://www.oracletutorial.com/oracle-basics/oracle-cube/) 
+
+CUBE fonksiyonuna verilen 2 kolon için 2^2 adet GROUPING SETS oluşturur. Örneğin; 3 kolon için 8 GROUPING SETS oluşturur.
+
+```sql
+GROUPING SETS ( (D.DEPARTMENT_NAME, E.JOB_ID),
+                (D.DEPARTMENT_NAME),
+                (E.JOB_ID),
+                (NULL)
+               )
+-- YERİNE
+CUBE(D.DEPARTMENT_NAME, E.JOB_ID)
+-- KULLANILABILIR
 ```
 
 ```sql
-SELECT department_id, MAX(salary)
-  FROM employees
-  GROUP BY department_id;
+SELECT DEPARTMENT_ID, COUNT(SALARY), SUM(SALARY)
+FROM EMPLOYEES E
+GROUP BY DEPARTMENT_ID;
 
---ENTERESAN BİR KULLANIM  
-SELECT AVG(MAX(salary))
-  FROM employees
-  GROUP BY department_id;
+SELECT DEPARTMENT_ID, COUNT(SALARY), SUM(SALARY)
+FROM EMPLOYEES E
+GROUP BY CUBE(DEPARTMENT_ID);
+
+SELECT DEPARTMENT_ID, E.JOB_ID, COUNT(SALARY), SUM(SALARY)
+FROM EMPLOYEES E
+WHERE E.DEPARTMENT_ID IN (30,100)
+GROUP BY DEPARTMENT_ID, E.JOB_ID;
+
+SELECT DEPARTMENT_ID, E.JOB_ID, COUNT(SALARY), SUM(SALARY)
+FROM EMPLOYEES E
+WHERE E.DEPARTMENT_ID IN (30,100)
+GROUP BY CUBE(DEPARTMENT_ID, E.JOB_ID);
+--ORDER BY DEPARTMENT_ID NULLS LAST, JOB_ID NULLS LAST; -- ***
+
+-- *** EN PRATİK KULLANIMI ***
+SELECT DEPARTMENT_ID, E.JOB_ID, COUNT(SALARY), SUM(SALARY)
+FROM EMPLOYEES E
+WHERE E.DEPARTMENT_ID IN (30,100)
+GROUP BY DEPARTMENT_ID, CUBE(E.JOB_ID)
+ORDER BY DEPARTMENT_ID NULLS LAST, JOB_ID NULLS LAST;
+-- *** ÖDEV TOPLAM SATIRINI İNSAN OKUSUN ***
+
+
 ```
 
-#### CUBE - [https://www.oracletutorial.com/oracle-basics/oracle-cube/](https://www.oracletutorial.com/oracle-basics/oracle-cube/) 
+
 
 #### ROLLUP - [https://www.oracletutorial.com/oracle-basics/oracle-rollup/](https://www.oracletutorial.com/oracle-basics/oracle-rollup/) 
 
