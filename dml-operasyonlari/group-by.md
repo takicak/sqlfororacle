@@ -87,7 +87,16 @@ GROUPING SETS ( (D.DEPARTMENT_NAME, E.JOB_ID),
 --ORDER BY GROUPING_ID(NULL)
 ```
 
-#### 
+```sql
+SELECT department_id, MAX(salary)
+  FROM employees
+  GROUP BY department_id;
+
+--ENTERESAN BİR KULLANIM  
+SELECT AVG(MAX(salary))
+  FROM employees
+  GROUP BY department_id;
+```
 
 #### CUBE - [https://www.oracletutorial.com/oracle-basics/oracle-cube/](https://www.oracletutorial.com/oracle-basics/oracle-cube/) 
 
