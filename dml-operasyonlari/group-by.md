@@ -110,9 +110,9 @@ ORDER BY DEPARTMENT_NAME NULLS LAST, JOB_ID NULLS LAST;
 ORDER BY GROUPING(NULL);
 ```
 
-### 
+#### 
 
-### CUBE - [https://www.oracletutorial.com/oracle-basics/oracle-cube/](https://www.oracletutorial.com/oracle-basics/oracle-cube/) 
+#### CUBE - [https://www.oracletutorial.com/oracle-basics/oracle-cube/](https://www.oracletutorial.com/oracle-basics/oracle-cube/) 
 
 CUBE fonksiyonuna verilen 2 kolon için 2^2 adet GROUPING SETS oluşturur. Örneğin; 3 kolon için 8 GROUPING SETS oluşturur.
 
@@ -170,7 +170,7 @@ select case when GROUPING_ID(Color)=0
 from Production.Product
 group by Color
 with rollup
-```
+```#### ROLLUP - [https://www.oracletutorial.com/oracle-basics/oracle-rollup/](https://www.oracletutorial.com/oracle-basics/oracle-rollup/) 
 
 #### PIVOT - [https://www.oracletutorial.com/oracle-basics/oracle-pivot/](https://www.oracletutorial.com/oracle-basics/oracle-pivot/) 
 
@@ -180,3 +180,6 @@ with rollup
 
 
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTY5MTM3NzYwNl19
+-->
