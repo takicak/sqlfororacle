@@ -51,5 +51,32 @@ INTERSECT
 SELECT 'Alexander', 'Hunold' FROM DUAL
 ```
 
+#### 
+
+#### UNION \(İKİ SORGUYU BİRLEŞTİRİRKEN KÜME OLUŞTURUR, TEKRARLANANLARI KALDIRIR\) 
+
+```sql
+
+```
+
+####  
+
+#### MINUS \(İKİ SORGU ARASINDAKİ FARK. BİRİNCİ SORGUDA OLUP İKİNCİ SORGUDA OLMAYAN VERİLERİ LİSTELER\) 
+
+```sql
+
+```
+
+#### 
+
+#### INTERSECT \(İKİ SORGUNUN KESİŞİM KÜMESINI GETİRİR\)
+
+```sql
+
+```
 
 
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTQzMDM5NTUxMl19
+-->
