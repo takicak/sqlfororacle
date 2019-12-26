@@ -1,16 +1,20 @@
 ---
-description: 'Kaynak : https://www.oracletutorial.com/oracle-basics/oracle-joins/'
+description: 'Kaynak : # Join Yöntemleri
+
+### JOIN YÖNTEMLERİ 
+
+### [https://www.oracletutorial.com/oracle-basics/oracle-joins/'
 ---
 
 # Join Yöntemleri
 
-![T&#xDC;M JOIN &#xD6;RNEKLER&#x130; &#x130;&#xC7;&#x130;N KULLANILACAK &#xD6;RNEK](../.gitbook/assets/join-veri.JPG)
+![T&#xDC;M JOIN &#xD6;RNEKLER&#x130; &#x130;&#xC7;&#x130;N KULLANILACAK &#xD6;RNEK](../.gitbook/assets/join-veri.JPG](https://www.oracletutorial.com/oracle-basics/oracle-joins/)
 
 #### 
 
 #### 
 
-## INNER JOIN 
+#### INNER JOIN 
 
 ![](../.gitbook/assets/inner-join.JPG)
 
@@ -18,12 +22,13 @@ description: 'Kaynak : https://www.oracletutorial.com/oracle-basics/oracle-joins
 SELECT a.id id_a, a.color color_a,
        b.id id_b, b.color color_b
 FROM palette_a a
-INNER JOIN palette_b b ON a.color = b.color;
+INNER JOIN palette_b b ON a.color = b.color;```sql
+
 ```
 
 ## 
 
-## LEFT JOIN \(LEFT OUTER JOIN\) 
+#### LEFT JOIN \(LEFT OUTER JOIN\) 
 
 ![](../.gitbook/assets/left-outer.JPG)
 
@@ -112,6 +117,44 @@ FROM EMP E JOIN DEPT D USING (DEPTNO);
 SELECT E.ENAME, D.DNAME
 FROM EMP E JOIN DEPT D ON D.DEPTNO = E.DEPTNO;
 -- DEPNO alanı JOIN de kullanılan alandır.
--- Bu alan SELECT yada WHERE kriterlerinde kullanılamaz. 
+-- Bu alan SELECT yada WHERE kriterlerinde kullanılamaz. ```sql
+
 ```
 
+
+
+#### RIGHT JOIN \(RIGHT OUTER JOIN\) 
+
+```sql
+
+```
+
+#### 
+
+#### FULL JOIN \(FULL AUTER JOIN\) 
+
+```sql
+
+```
+
+#### 
+
+#### SELF JOIN 
+
+```sql
+
+```
+
+
+
+#### INNER SELECT
+
+```sql
+
+```
+
+
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjMwOTAwOTE4XX0=
+-->
